@@ -62,50 +62,7 @@ b. `Continuous_Control.ipynb` has 4 sections:
 b. To learn, execute steps 1, 2 and 4.
 c. To replay a trained agent, execute steps 1, 2 and 5.
 
-d. The weights are saves as:
+d. The weights are saved as:
 - actor: `checkpoint_actor.pth`
 - critic: `checkpoint_critic.pth`
-
-# Hyper parameters
-
-1. ddpg() parameters:
-max_t sets the maximum number of timesteps per episodes.
-update_period and training_per_update set the relative frequency of training phases and data gathering phases:
-- At each timestep, in an episode 20 experiences are gathered and added to the replay buffer
-- update_period specifies the period, in timesteps, between training phases of the actor-critic architecture
-- training_per_update specifies the number fo training iterations within a training phase
-
-2. Training parameters in are listed at the top of ddpg_agent_ac.py 
-
-# Training observations
-
-Some key parameters did impact the success and stability of training.
-1. Setting the maximum number of iterations within an episode to a large number: 1000 or more
-If restricted to < 300, learning does not happen.
-My intution is that the agent takes a good action, this may lead to more experiences around a high-reward state.
-
-2. The state/action spaces dimensions are small. Yet I found that if the hidden layer sizes are < 128, training is tends to be unstable
-
-3. The size of the replay buffer provides a trade-off between training stability (larger) and convergence speed (smaller)
-Given 1000-2000 steps per episodes, 20 expeirences per step, a replay buffer of size 10^5 covers about 3-4 episodes.
-
-4. Starting with a value of training_per_update (10) yields fast and stable training. That number can subsequently be reduced.
-
-With the committed settings, training was fast and stable:
-![Training score curve][image2]
-
-Side-by-side comparison of untrained and trained agents:
-| Untrained | Trained |
-|:---------:|:-------:|
-| ![Untrained][image4] | ![Trained][image3] |
-
-# Future work
-- Apply to more complex problems (eg Crawler with walking jointed agents)
-- Implement an asynchronous architecture
-- Try different actor-critic architectures (eg A3C)
-
-
-
-
-
 
