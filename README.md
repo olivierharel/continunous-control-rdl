@@ -95,7 +95,9 @@ With the committed settings, training was fast and stable:
 ![Training score curve][image2]
 
 Side-by-side comparison of untrained and trained agents:
-![Untrained][image4]![Trained][image3]
+| Untrained | Trained |
+|:---------:|:-------:|
+| ![Untrained][image4] | ![Trained][image3] |
 
 # Future work
 - Apply to more complex problems (eg Crawler with walking jointed agents)
