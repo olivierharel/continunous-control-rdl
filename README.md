@@ -2,8 +2,8 @@
 
 [image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
 [image2]: https://github.com/olivierharel/continunous-control-rdl/blob/81c69e44294b69e5838b0d5f8b5eba5bd8528541/Training-score-curve.png "Training score curve"
-[video1]: https://github.com/olivierharel/continunous-control-rdl/blob/81c69e44294b69e5838b0d5f8b5eba5bd8528541/trained.mp4 "Trained agent"
-[video2]: https://github.com/olivierharel/continunous-control-rdl/blob/81c69e44294b69e5838b0d5f8b5eba5bd8528541/untrained.mp4 "Untrained agent"
+[image3]: https://github.com/olivierharel/continunous-control-rdl/blob/4d6c50240565a58746094f24410b806925f8cffa/trained10.webp "Trained agent"
+[image4]: https://github.com/olivierharel/continunous-control-rdl/blob/4d6c50240565a58746094f24410b806925f8cffa/untrained10.webp "Untrained agent"
 
 # Continuous Control project (Reacher)
 
@@ -95,7 +95,7 @@ With the committed settings, training was fast and stable:
 ![Training score curve][image2]
 
 Side-by-side comparison of untrained and trained agents:
-![Untrained][video2]![Trained][video1]
+![Untrained][image4]![Trained][image3]
 
 # Future work
 - Apply to more complex problems (eg Crawler with walking jointed agents)
